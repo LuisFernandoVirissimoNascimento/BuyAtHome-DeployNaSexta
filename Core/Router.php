@@ -40,14 +40,16 @@ class Router
     {
         $uri = strtok($_SERVER['REQUEST_URI'], '?');
 
-        // Remove o path base (ex: /BuyAtHome)
-        $basePath = dirname($_SERVER['SCRIPT_NAME']);
-        $uri = '/' . ltrim(substr($uri, strlen($basePath)), '/');
-
-        $uri = $uri === '' ? '/' : $uri;
-
         $method = $_SERVER['REQUEST_METHOD'];
+        
+        if (strpos($uri, 'BuyAtHome-DeployNaSexta')) {
+            $uri = str_replace('BuyAtHome-DeployNaSexta/', '', $uri);
+        }
+        
+        // $basePath = dirname($_SERVER['SCRIPT_NAME']);
+        // $uri = '/' . ltrim(substr($uri, strlen($basePath)), '/');
 
+        // $uri = $uri === '' ? '/' : $uri;
 
         $routes = $this->routes[$method] ?? [];
 
