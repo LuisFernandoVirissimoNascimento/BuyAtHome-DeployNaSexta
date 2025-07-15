@@ -7,7 +7,7 @@
     <link rel="icon" href="public/images/icon.ico" type="image/x-icon">
     <title>Bem-vindo</title>
     <link rel="stylesheet" href="public/Assets/Css/welcome.css">
-    <link rel="stylesheet" href="public/Assets/Css/navbar .css">
+    <link rel="stylesheet" href="public/Assets/Css/navbar.css">
     <link rel="stylesheet" href="public/Assets/Css/style.css">
 </head>
 <body>
