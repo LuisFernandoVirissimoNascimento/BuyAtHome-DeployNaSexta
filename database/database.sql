@@ -5,7 +5,8 @@ USE buyathome_promotion;
 
 CREATE TABLE cliente (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
-    name_cliente VARCHAR(255) boolean,
+    name_cliente VARCHAR(255), 
+    can_redeem_daily boolean(false) not null,
     cpf VARCHAR(14) not null,
     senha VARCHAR(255) not null
 );
