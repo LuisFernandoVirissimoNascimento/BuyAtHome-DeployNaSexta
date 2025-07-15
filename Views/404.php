@@ -14,12 +14,12 @@
 <body class="linha centro-j centro-a">
     <main class="coluna centro-j centro-a">
         <linha class="linha centro-a">
-            <p class="texto-404">4</p>
+            <p class="texto-404 bold">4</p>
             <img src="../public/assets/img/emoji-triste.png" alt="emoji-triste" class="emoji">
-            <p class="texto-404">4</p>
+            <p class="texto-404 bold">4</p>
         </linha>
         <linha>
-            <h3>Opa! Não enchamos descontos por aqui</h3>
+            <h3 class = 'bold'>Opa! Não enchamos descontos por aqui</h3>
         </linha class="linha">
         <linha>
             <h4>
