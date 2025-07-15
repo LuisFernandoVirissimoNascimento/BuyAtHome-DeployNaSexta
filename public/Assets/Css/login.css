@@ -1,0 +1,55 @@
+.linha{
+    display: flex;
+    flex-direction: row;
+}
+.coluna{
+    display: flex;
+    flex-direction: column;
+}
+
+.centro-j{
+    justify-content: center;
+}
+.centro-a{
+    align-items: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.margin-5{
+    margin: 2px;
+}
+
+.notBold{
+    font-weight: lighter;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/backgroundLogin2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+.formLogin{
+    background-color: rgb(255, 255, 255,0.6);
+    width: 40vw;
+    height: 100vh;
+}
+
+.input{
+    background:none;
+    border: 0px;
+    border-bottom: solid 1px;
+    margin: 5px;
+}
+
+@media (max-width:767px) {
+    .formLogin{
+        width: 70vw;
+    }
+    
+}
