@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="public/images/icon.ico" type="image/x-icon">
     <title>Bem-vindo</title>
     <link rel="stylesheet" href="public/Assets/Css/welcome.css">
+    <link rel="stylesheet" href="public/Assets/Css/navbar.css">
     <link rel="stylesheet" href="public/Assets/Css/style.css">
 </head>
 <body>
+  <navbar></navbar>
 <section class="header-background">
     <div class="header-background-content">
         <div class="left-items">
@@ -33,6 +36,6 @@
         <div class="product">Product 4</div>
     </div>  
 </div>
-
+<script src="public/Assets/js/home.js" type="module"></script>
 </body>
 </html>

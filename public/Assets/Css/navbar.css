@@ -1,0 +1,92 @@
+.navbar {
+  box-sizing: border-box;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 86px;
+  background-color: #fff;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.coins_menu_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  column-gap: 15px;
+  height: min-content;
+  padding: 10px;
+}
+
+.coin {
+  margin: 0;
+  color: #ff7703;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 10.5%;
+  text-underline-position: from-font;
+  text-underline-offset: auto;
+}
+
+.icon {
+  width: 38px;
+  height: 38px;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.sidebar_options {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding-left: 30px;
+}
+
+.options_container > li {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+}
+
+.options_container {
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
+  flex-direction: row;
+}
+
+.close_sidebar_icon {
+  width: 35px;
+  height: 35px;
+  align-self: end;
+  padding: 20px 20px 0 0;
+  cursor: pointer;
+}
