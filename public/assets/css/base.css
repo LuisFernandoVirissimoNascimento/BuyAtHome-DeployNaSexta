@@ -1,0 +1,8 @@
+/* Cores */
+:root{
+    --cor-base: #FF7703; /* Cor principal - tom claro*/ 
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
