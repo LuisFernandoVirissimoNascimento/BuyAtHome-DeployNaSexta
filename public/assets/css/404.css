@@ -1,0 +1,61 @@
+/* Geral */
+*{
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+/*  Funções */
+
+body{ 
+    height: 100vh;
+}
+.linha{
+    display: flex;
+    flex-direction: row;
+}
+.coluna{
+    display: flex;
+    flex-direction: column;
+}
+
+.centro-j{
+    justify-content: center;
+}
+.centro-a{
+    align-items: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+/* Especificos */
+
+.emoji{
+    max-width: 80px;
+    max-height: 80px;
+}
+
+
+.texto-404{
+    max-width: fit-content;
+    max-height: max-content;
+    font-size: 100px;
+    margin: 5px;
+}
+
+.btn-retornar{
+    color: white;
+    background-color: var(--cor-base);
+    border: solid 0px;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.a{
+    cursor: pointer;
+}
