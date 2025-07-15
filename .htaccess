@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Define a pasta "public" como base do sistema
+    RewriteRule ^ public/index.php [L]
+</IfModule>
