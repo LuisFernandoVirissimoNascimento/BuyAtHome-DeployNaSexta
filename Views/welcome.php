@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo</title>
-    <link rel="stylesheet" href="../public/CSS/welcome.css">
+    <link rel="stylesheet" href="public/Assets/Css/welcome.css">
+    <link rel="stylesheet" href="public/Assets/Css/style.css">
 </head>
 <body>
-<section class="hero">
-  <div class="hero-content">
+<section class="header-background">
+  <div class="header-background-content">
     <h1>Mini-mercado de Condomínio</h1>
     <p>Uma facilidade que surpreende.</p>
     <button>Resgatar Cupons</button>
