@@ -44,11 +44,10 @@ class Router
         $basePath = dirname($_SERVER['SCRIPT_NAME']);
         $uri = '/' . ltrim(substr($uri, strlen($basePath)), '/');
 
-        // Normaliza URI
-        $uri = rtrim($uri, '/') ?: '/';
+        $uri = $uri === '' ? '/' : $uri;
 
         $method = $_SERVER['REQUEST_METHOD'];
-        
+
 
         $routes = $this->routes[$method] ?? [];
 
