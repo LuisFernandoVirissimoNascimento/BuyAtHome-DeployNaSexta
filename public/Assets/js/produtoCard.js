@@ -18,9 +18,9 @@ const produtos = [
     precoNovo: 14.15,
   },
   {
-    image: "images/card product/produto.png",
+    image: "images/card product/Coca Cola.webp",
     desconto: 7.5,
-    titulo: "Requeijão Extra cremoso Danone",
+    titulo: "Coca Cola",
     precoAntigo: 9.99,
     precoNovo: 9.24,
   },
