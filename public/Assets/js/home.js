@@ -1,18 +1,25 @@
 var sideBarOpened = true;
 
 document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menu_button");
-  const closeBtn = document.getElementById("menu_close_sidebar");
+  const menuButton = document.getElementById("menu_button");
+  const sidebarCloseButton = document.getElementById("menu_close_sidebar");
   const sidebar = document.getElementById("menu_sidebar");
 
-  menuBtn.addEventListener("click", () => {
+  menuButton.addEventListener("click", () => {
     openMenu(sidebar);
   });
 
-  closeBtn?.addEventListener("click", () => {
-    sidebar.style.display = "none";
+  sidebarCloseButton.addEventListener("click", () => {
+    closeMenu(sidebar);
   });
 
+  function openMenu(div) {
+    div.classList.add('open');
+  }
+
+  function closeMenu(div) {
+    div.classList.remove('open'); 
+  }
   document.addEventListener('keydown', function (event) {
     console.log('Tecla pressionada:', event.key);
 
@@ -39,4 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => {
       console.error('Erro ao buscar moedas:', error);
     });
+
+  
 });

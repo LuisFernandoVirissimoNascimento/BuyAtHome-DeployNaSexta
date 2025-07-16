@@ -21,7 +21,7 @@
     }
 
     include_once(__DIR__ . '/components/navbar.php');
-    ?> ?>
+    ?>
     <section class="header-background">
         <div class="header-background-content">
             <div class="left-items">
