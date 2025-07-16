@@ -9,6 +9,9 @@ class LoginController
 {
     public function login()
     {
+        if (session()->has('usuario')) {
+            redirect()->route('welcome');
+        }
         return View::render('login');
     }
 

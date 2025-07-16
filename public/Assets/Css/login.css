@@ -62,22 +62,10 @@ main {
   background-color: var(--cor-base);
   border: 0px;
   border-radius: 10px;
-  height: 30px;
-  width: 120px;
-  font-size: larger;
-}
-
-.alert {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 9999;
-}
-
-.alert-danger {
-  background-color: red;
-  color: black;
+  height: 40px;
+  width: 270px;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 @media (max-width: 1024px) {

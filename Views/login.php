@@ -19,6 +19,7 @@
     <?php if (session()->has('error')): ?>
         <div class="alert">
             <div class="alert-danger">
+                <img src="public/images/toast/alert.svg" >
                 <p><?php echo session()->get('error'); ?></p>
             </div>
         </div>
