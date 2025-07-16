@@ -1,6 +1,7 @@
 /* Cores */
 :root{
     --cor-base: #FF7703; /* Cor principal - tom claro*/ 
+    --cor-card-desconto: #FFFEFE
 }
 
 * {

@@ -1,0 +1,98 @@
+.content {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content h1 {
+    white-space: nowrap;
+    font-size: 40px;
+}
+
+.content a {
+    color: var(--cor-base);
+}
+
+.container-desconto {
+    width: 80%;
+    display: flex;
+    gap: 20px; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    padding: 20px;
+}
+
+.desconto-card {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: var(--cor-card-desconto);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.30);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.desconto-card:hover{
+    transform: scale(1.05);
+}
+
+.moedas-group {
+    display: flex;
+    padding: 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card-moedas {
+    color: var(--cor-base);
+    font-size: 30px;
+    padding-right: 2%;
+    font-weight: 700;
+}
+
+.card-icon {
+    width: 33px;
+    height: 33px;
+}
+
+.valor-desconto {
+    align-self: center;
+    color: var(--cor-base);
+    font-size: 42px !important;
+}
+
+.btn-desconto {
+    display: flex;
+    width: 280px;
+    height: 40px;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--cor-base);
+    color: var(--cor-card-desconto);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+    margin-top: 3%;
+}
+
+.btn-desconto:hover{
+    transform: scale(1.02);
+    background-color: var(--cor-card-desconto);
+    color: var(--cor-base);
+}
+
+@media (max-width: 768px) {
+
+    .content h1{
+        font-size: 25px;
+        white-space: normal;
+        text-align: center;
+    }
+}

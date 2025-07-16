@@ -13,27 +13,30 @@
     <link rel="icon" href="public/images/icon.ico" type="image/x-icon">
 </head>
 
-<body class="linha centro-j centro-a">
-    <main class="coluna centro-j centro-a">
-        <linha class="linha centro-a">
-            <p class="texto-404 bold">4</p>
-            <img src="public/assets/img/emoji-triste.png" alt="emoji-triste" class="emoji">
-            <p class="texto-404 bold">4</p>
-        </linha>
-        <linha>
-            <h3 class='bold'>Opa! Não enchamos descontos por aqui</h3>
-        </linha class="linha">
-        <linha>
-            <h4>
-                Vamos tentar em um lugar melhor!
-            </h4>
-        </linha>
-        <linha class="linha">
-            <a href="http://localhost/BuyAtHome-DeployNaSexta/" class='a'>
-                <button class="btn-retornar">Voltar a página inicial</button>
-            </a>
-        </linha>
-    </main>
+<body>
+    <navbar></navbar>
+    <blocoCentral class="centro-j centro-a bloco-central">
+        <main class="coluna centro-j centro-a">
+            <linha class="linha centro-a">
+                <p class="texto-404 bold">4</p>
+                <img src="public/assets/img/emoji-triste.png" alt="emoji-triste" class="emoji">
+                <p class="texto-404 bold">4</p>
+            </linha>
+            <linha>
+                <h3 class = 'bold'>Opa! Não enchamos descontos por aqui</h3>
+            </linha class="linha">
+            <linha>
+                <h4>
+                    Vamos tentar em um lugar melhor!
+                </h4>
+            </linha>
+            <linha class="linha">
+                <a href="http://localhost/BuyAtHome-DeployNaSexta/" class='a'>
+                    <button class="btn-retornar">Voltar a página inicial</button>
+                </a>
+            </linha>
+        </main>
+    </blocoCentral>
     <script src="public/Assets/js/home.js" type="module"></script>
 </body>
 
