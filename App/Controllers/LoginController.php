@@ -9,6 +9,9 @@ class LoginController
 {
     public function login()
     {
+        if (session()->has('usuario')) {
+            redirect()->route('welcome');
+        }
         return View::render('login');
     }
 
@@ -40,5 +43,10 @@ class LoginController
             session()->flash('error', 'CPF ou senha inválidos.');
             redirect()->route('loginpage');
         }
+    }
+    
+    public function logout() {
+        session()->clear();
+        redirect()->route('loginpage');
     }
 }

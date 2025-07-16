@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="public/assets/css/404.css">
     <link rel="stylesheet" href="public/assets/css/base.css">
     <link rel="stylesheet" href="public/assets/css/navbar.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <title>404</title>
@@ -14,7 +15,7 @@
 </head>
 
 <body>
-<?php include_once(__DIR__ . '/components/navbar.php'); ?>
+    <?php include_once(__DIR__ . '/components/navbar.php'); ?>
     <blocoCentral class="centro-j centro-a bloco-central">
         <main class="coluna centro-j centro-a">
             <linha class="linha centro-a">
@@ -23,7 +24,7 @@
                 <p class="texto-404 bold">4</p>
             </linha>
             <linha>
-                <h3 class = 'bold'>Opa! Não enchamos descontos por aqui</h3>
+                <h3 class='bold'>Opa! Não enchamos descontos por aqui</h3>
             </linha class="linha">
             <linha>
                 <h4>
