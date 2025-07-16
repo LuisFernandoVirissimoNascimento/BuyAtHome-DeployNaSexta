@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 use Core\View;
 
-class HomeController extends Controller
+class CuponsController extends Controller
 {
 
-    public function index()
+    public function descontos()
     {
         View::render('lista_descontos');
     }
