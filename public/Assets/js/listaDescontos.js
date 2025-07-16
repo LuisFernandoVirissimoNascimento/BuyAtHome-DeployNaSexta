@@ -11,12 +11,27 @@ let itens_desconto = [
     {
         id: 2,
         moeda: 20,
-        desconto: 20
+        desconto: 15
     },
     {
         id: 3,
         moeda: 30,
-        desconto: 30
+        desconto: 20
+    },
+    {
+        id: 4,
+        moeda: 40,
+        desconto: 25
+    },
+    {
+        id: 5,
+        moeda: 60,
+        desconto: 35
+    },
+    {
+        id: 6,
+        moeda: 80,
+        desconto: 50
     }
 ];
 
