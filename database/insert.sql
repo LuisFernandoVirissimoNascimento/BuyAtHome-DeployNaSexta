@@ -1,9 +1,6 @@
 INSERT INTO cliente (name_cliente, can_redeem_daily, cpf, senha) 
 VALUES 
-    ('João Silva', FALSE, '123.456.789-00', 'senha123'),
-    ('Maria Oliveira', FALSE, '987.654.321-00', 'senha456'),
-    ('Carlos Santos', FALSE, '112.233.445-56', 'senha789'),
-    ('Ana Costa', FALSE, '223.344.556-77', 'senha012');
+    ('Luis', FALSE, '052.052.052-28', '$2y$10$0zUNkjdfeZZi9nxbMF5PyeZFHTV5QuCgEG1Hn8nIGqOQ17UGfiIge');
 
 INSERT INTO produto (name_produto, imagem, descricao, valor, desconto) 
 VALUES 
