@@ -1,4 +1,5 @@
 .navbar {
+  position: fixed;
   box-sizing: border-box;
   padding: 15px;
   display: flex;
@@ -49,16 +50,24 @@
 }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
-  width: 15%;
+  right: -285px;
+  width: 285px;
   height: 100%;
   background-color: #fff;
   z-index: 10;
-  display: none;
+  display: flex;
   flex-direction: column;
   row-gap: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; 
+  overflow: hidden;
+}
+
+.sidebar.open {
+  right: 0;
+  opacity: 1;
 }
 
 .sidebar_options {
@@ -89,4 +98,14 @@
   align-self: end;
   padding: 20px 20px 0 0;
   cursor: pointer;
+}
+
+@media (max-width: 425px) {
+  .logo_text {
+    display: none;
+  }
+  .coins_menu_container {
+    position: absolute;
+    right: 0;
+  }
 }

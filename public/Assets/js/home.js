@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.getElementById("menu_close_sidebar");
   const sidebar = document.getElementById("menu_sidebar");
 
-  menuBtn?.addEventListener("click", () => {
-    sidebar.style.display = "flex";
+  menuButton.addEventListener("click", () => {
+    openMenu(sidebar);
   });
 
   closeBtn?.addEventListener("click", () => {

@@ -1,8 +1,13 @@
 /* Cores */
 :root{
     --cor-base: #FF7703; /* Cor principal - tom claro*/ 
+    --cor-card-desconto: #FFFEFE
 }
 
 * {
     font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    gap: 0;
 }
+
