@@ -1,8 +1,8 @@
 const navbar = () => {
   return `  <nav class="navbar">
     <div class="logo">
-      <img src="public/images/nav/logo.png">
-      <img src="public/images/nav/logo_text.png">
+      <img class="logo_img" src="public/images/nav/logo.png">
+      <img class="logo_text" src="public/images/nav/logo_text.png">
     </div>
     <div class="coins_menu_container">
       <p class="coin">2</p>
