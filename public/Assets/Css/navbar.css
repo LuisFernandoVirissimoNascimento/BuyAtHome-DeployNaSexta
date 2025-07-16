@@ -52,7 +52,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 15%;
+  width: 285px;
   height: 100%;
   background-color: #fff;
   z-index: 10;
@@ -89,4 +89,14 @@
   align-self: end;
   padding: 20px 20px 0 0;
   cursor: pointer;
+}
+
+@media (max-width: 425px) {
+  .logo_text {
+    display: none;
+  }
+  .coins_menu_container {
+    position: absolute;
+    right: 0;
+  }
 }
