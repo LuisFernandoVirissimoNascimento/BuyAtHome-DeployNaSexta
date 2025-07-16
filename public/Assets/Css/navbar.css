@@ -1,4 +1,5 @@
 .navbar {
+  position: fixed;
   box-sizing: border-box;
   padding: 15px;
   display: flex;
@@ -49,16 +50,24 @@
 }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
+  right: -285px;
   width: 285px;
   height: 100%;
   background-color: #fff;
   z-index: 10;
-  display: none;
+  display: flex;
   flex-direction: column;
   row-gap: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; 
+  overflow: hidden;
+}
+
+.sidebar.open {
+  right: 0;
+  opacity: 1;
 }
 
 .sidebar_options {

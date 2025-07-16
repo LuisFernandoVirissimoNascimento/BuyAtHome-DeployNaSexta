@@ -8,20 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const sidebarCloseButton = document.getElementById("menu_close_sidebar");
   const sidebar = document.getElementById("menu_sidebar");
 
-  
   menuButton.addEventListener("click", () => {
     openMenu(sidebar);
   });
 
   sidebarCloseButton.addEventListener("click", () => {
     closeMenu(sidebar);
-  })
+  });
 
   function openMenu(div) {
-    div.style.display = "flex";
+    div.classList.add('open');
   }
 
   function closeMenu(div) {
-    div.style.display = "none"
+    div.classList.remove('open'); 
   }
 });
