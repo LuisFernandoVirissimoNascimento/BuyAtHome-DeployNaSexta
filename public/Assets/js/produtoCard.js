@@ -2,37 +2,28 @@ import ProdutoCard from '../../Components/produto.js';
 
 const div = document.querySelector("cardProduto");
 
-const produtos = [
-  {
-    image: "images/card product/kro_cebola.png",
-    desconto: 10,
-    titulo: "Kró Cebola",
-    precoAntigo: 4.49,
-    precoNovo: 4.05,
-  },
-  {
-    image: "images/card product/maionese.webp",
-    desconto: 5.00,
-    titulo: "Maionese",
-    precoAntigo: 14.95,
-    precoNovo: 14.15,
-  },
-  {
-    image: "images/card product/Coca Cola.webp",
-    desconto: 7.5,
-    titulo: "Coca Cola",
-    precoAntigo: 9.99,
-    precoNovo: 9.24,
-  },
-  {
-    image: "images/card product/produto.png",
-    desconto: 12,
-    titulo: "Requeijão Extra cremoso Danone",
-    precoAntigo: 8.99,
-    precoNovo: 7.89,
-  }
-];
+async function carregarProdutos() {
+  try {
+    const response = await fetch("product");
+    const produtos = await response.json();
+    console.log(produtos);
 
-produtos.forEach(produto => {
-  div.innerHTML += ProdutoCard(produto);
-});
+    produtos.forEach(produto => {
+      const precoAntigo = parseFloat(produto.valor);
+      const desconto = parseFloat(produto.desconto);
+      const precoNovo = (precoAntigo - (precoAntigo * desconto / 100)).toFixed(2);
+
+      div.innerHTML += ProdutoCard({
+        image: produto.imagem,
+        desconto: desconto,
+        titulo: produto.name_produto,
+        precoAntigo: precoAntigo.toFixed(2),
+        precoNovo: precoNovo
+      });
+    });
+  } catch (error) {
+    console.error("Erro ao carregar produtos:", error);
+  }
+}
+
+carregarProdutos();
