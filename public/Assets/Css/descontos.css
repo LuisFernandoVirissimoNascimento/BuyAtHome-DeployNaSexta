@@ -1,5 +1,5 @@
 .content {
-    margin-top: 5%;
+    padding-top: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,5 +115,20 @@
         font-size: 25px;
         white-space: normal;
         text-align: center;
+        padding-top: 12%;
     }
+
+    .valor-desconto {
+        padding: 0 !important;
+    }
+
 }
+@media (max-width: 425px) {
+
+    .content h1{
+        font-size: 20px;
+        padding-top: 15%;
+    }
+
+}
+
