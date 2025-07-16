@@ -11,13 +11,14 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <title>404</title>
+    <title>Login</title>
+    <link rel="icon" href="public/images/icon.ico" type="image/x-icon">
 </head>
 
 <body>
 <?php include_once(__DIR__ . '/components/navbar.php'); ?>
     <main>
-        <form class='formLogin coluna centro-a centro-j'>
+        <form class='formLogin coluna centro-a centro-j' method="POST" action="">
             <div class="coluna centro-a centro-j">
                 <h1 class='fonte-titulo'>Entre na</h1>
                 <div class="linha">
@@ -29,7 +30,7 @@
                 </div>
             </div>
             <input type="tel" name="CPF" id="cpf" placeholder="000.000.000-00" class="input" required pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" title="Digite um CPF no formato 000.000.000-00">
-            <input type="password" name="Senha" id="Senha" placeholder="Sua senha" class="input" required minlength="8" autocomplete="current-password">
+            <input type="password" name="Senha" id="Senha" placeholder="Sua senha" class="input" required minlength="6" autocomplete="current-password">
             <button type="submit" class="bt-enviar">Login</button>
         </form>
     </main>

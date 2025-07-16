@@ -25,6 +25,7 @@ function route(string $name, array $params = []): ?string
 function session(): Session
 {
     global $session;
+    $session = new Session();
     return $session;
 }
 
