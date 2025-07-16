@@ -100,6 +100,13 @@
   cursor: pointer;
 }
 
+.options_container{
+  background:none;
+  border: 0px;
+  box-shadow: 1px 1px 0px rgb(0, 0, 0,0.4);
+  cursor: pointer;
+}
+
 @media (max-width: 425px) {
   .logo_text {
     display: none;

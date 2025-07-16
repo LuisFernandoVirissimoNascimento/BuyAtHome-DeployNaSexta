@@ -1,4 +1,5 @@
-import navbar from "../../Components/Navbar.js";
+
+var sideBarOpened = true
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("navbar");
@@ -29,4 +30,24 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => {
       console.error('Erro ao buscar moedas:', error);
     });
+  document.addEventListener('keydown', function(event) {
+    
+    console.log('Tecla pressionada:', event.key); // Ótimo para depurar e descobrir o nome de outras teclas!
+  
+    if (event.key === 'Escape') {
+      if (sideBarOpened == true){
+        openMenu(sidebar);
+        sideBarOpened = false;
+      } else if (sideBarOpened == false) {
+        closeMenu(sidebar)
+        sideBarOpened = true;
+      }
+    }
+  });
+
+
+
+  
+
+
 });

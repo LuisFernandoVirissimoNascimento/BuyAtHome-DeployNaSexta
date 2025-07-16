@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <navbar></navbar>
+    <?php include_once(__DIR__ . '/components/navbar.php'); ?>
     <div class="content">
         <h1>Veja quais <a>descontos</a> você pode adquirir!</h1>
 
