@@ -1,8 +1,8 @@
-import navbar from "../../Components/Navbar.js";
+
+var sideBarOpened = true
 
 document.addEventListener("DOMContentLoaded", () => {
-  const div = document.querySelector("navbar");
-  div.innerHTML = navbar();
+  
 
   const menuButton = document.getElementById("menu_button");
   const sidebarCloseButton = document.getElementById("menu_close_sidebar");
@@ -24,4 +24,24 @@ document.addEventListener("DOMContentLoaded", () => {
   function closeMenu(div) {
     div.style.display = "none"
   }
+  document.addEventListener('keydown', function(event) {
+    
+    console.log('Tecla pressionada:', event.key); // Ótimo para depurar e descobrir o nome de outras teclas!
+  
+    if (event.key === 'Escape') {
+      if (sideBarOpened == true){
+        openMenu(sidebar);
+        sideBarOpened = false;
+      } else if (sideBarOpened == false) {
+        closeMenu(sidebar)
+        sideBarOpened = true;
+      }
+    }
+  });
+
+
+
+  
+
+
 });

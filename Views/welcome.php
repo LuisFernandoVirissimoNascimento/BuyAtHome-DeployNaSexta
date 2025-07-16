@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <navbar></navbar>
+    <?php include_once(__DIR__ . '/components/navbar.php'); ?>
     <section class="header-background">
         <div class="header-background-content">
             <div class="left-items">
@@ -21,7 +21,7 @@
                 <h1 class="orange-text">Uma facilidade que surpreende.</h1>
             </div>
             <div class="right-items">
-                <button>Resgatar Cupons</button>
+                <button onclick="window.location.href='<?php echo $_ENV['APP_URL'] . route('lista_descontos');  ?>'">Resgatar Cupons</button>
             </div>
         </div>
     </section>

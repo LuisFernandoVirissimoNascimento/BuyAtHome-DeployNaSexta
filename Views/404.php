@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <navbar></navbar>
+<?php include_once(__DIR__ . '/components/navbar.php'); ?>
     <blocoCentral class="centro-j centro-a bloco-central">
         <main class="coluna centro-j centro-a">
             <linha class="linha centro-a">
@@ -30,7 +30,7 @@
                 </h4>
             </linha>
             <linha class="linha">
-                <a href="http://localhost/BuyAtHome-DeployNaSexta/" class='a'>
+                <a href="<?php echo $_ENV['APP_URL'] . route('homepage'); ?>" class='a'>
                     <button class="btn-retornar">Voltar a página inicial</button>
                 </a>
             </linha>
