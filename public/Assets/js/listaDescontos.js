@@ -38,3 +38,17 @@ let itens_desconto = [
 itens_desconto.forEach(item => {
     div.innerHTML += cardDesconto(item);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.desconto-card');
+  
+    cards.forEach(card => {
+      card.addEventListener('click', (event) => {
+        const cardId = card.dataset.id;
+        
+        card.classList.toggle("ativo")
+  
+      });
+    });
+  });
