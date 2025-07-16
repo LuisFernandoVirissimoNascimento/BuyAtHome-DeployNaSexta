@@ -11,7 +11,7 @@ const produtos = [
     precoNovo: 4.05,
   },
   {
-    image: "images/card product/produto.png",
+    image: "images/card product/maionese.webp",
     desconto: 5.00,
     titulo: "Maionese",
     precoAntigo: 14.95,
