@@ -1,10 +1,10 @@
- <nav class="navbar">
+ <nav id="navbar" class="navbar">
      <div class="logo">
          <img class="logo_img" src="public/images/nav/logo.png">
          <img class="logo_text" src="public/images/nav/logo_text.png">
      </div>
      <div class="coins_menu_container">
-         <p class="coin">2</p>
+         <p class="coin"> <?= htmlspecialchars($moedas) ?> </p>
          <img class="icon" src="public/images/nav/moeda.svg">
          <img id="menu_button" class="menu icon" src="public/images/nav/menu.svg">
      </div>

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Core\Model;
 
 class MoedasModel extends Model
 {
-    protected string $table = 'cliente';
+    protected string $table = 'moedas';
     protected string $primaryKey = 'id_cliente';
 
     /**
@@ -15,8 +15,23 @@ class MoedasModel extends Model
      * @param int $id
      * @return array|null
      */
+
     public function getMoedasInfo(int $id): ?array
     {
+        $sql = "SELECT moedas, ultima_moeda FROM moedas WHERE id_cliente = :id LIMIT 1";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindParam(':id', $id, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        $cliente = $stmt->fetch(\PDO::FETCH_ASSOC);
+
+        if ($cliente) {
+            return [
+                'moedas' => $cliente['moedas'] ?? 0,
+                'ultima_moeda' => $cliente['ultima_moeda'] ?? null,
+            ];
+        }
+
         return null;
     }
 

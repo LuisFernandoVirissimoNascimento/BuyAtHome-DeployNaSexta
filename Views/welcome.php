@@ -13,7 +13,15 @@
 </head>
 
 <body>
-    <?php include_once(__DIR__ . '/components/navbar.php'); ?>
+    <?php
+    $moedas = 0; 
+
+    if (isset($_SESSION['usuario']['moedas'])) {
+        $moedas = $_SESSION['usuario']['moedas'];
+    }
+
+    include_once(__DIR__ . '/components/navbar.php');
+    ?> ?>
     <section class="header-background">
         <div class="header-background-content">
             <div class="left-items">
