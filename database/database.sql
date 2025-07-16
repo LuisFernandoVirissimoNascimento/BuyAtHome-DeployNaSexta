@@ -6,13 +6,14 @@ USE buyathome_promotion;
 CREATE TABLE cliente (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     name_cliente VARCHAR(255), 
-    can_redeem_daily boolean(false) not null,
+    can_redeem_daily boolean not null,
     cpf VARCHAR(14) not null,
     senha VARCHAR(255) not null
 );
 
 CREATE TABLE produto (
     id_produto INT AUTO_INCREMENT PRIMARY KEY,
+    imagem varchar(255) NOT NULL,
     name_produto VARCHAR(255) not null,
     descricao VARCHAR(255) not null,
     valor DECIMAL(10, 2),
