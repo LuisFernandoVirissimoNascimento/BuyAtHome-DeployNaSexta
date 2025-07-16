@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="public/assets/css/login.css">
     <link rel="stylesheet" href="public/assets/css/base.css">
     <link rel="stylesheet" href="public/assets/css/navbar.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
