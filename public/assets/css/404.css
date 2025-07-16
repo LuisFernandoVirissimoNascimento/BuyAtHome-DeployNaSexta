@@ -59,3 +59,11 @@ body{
 .a{
     cursor: pointer;
 }
+
+.bloco-central{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
