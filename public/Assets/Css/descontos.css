@@ -6,6 +6,7 @@
     flex-direction: column;
 }
 
+
 .content h1 {
     white-space: nowrap;
     font-size: 40px;
@@ -15,6 +16,13 @@
     color: var(--cor-base);
 }
 
+.content form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .container-desconto {
     width: 80%;
     display: flex;
@@ -22,6 +30,7 @@
     justify-content: center; 
     flex-wrap: wrap; 
     padding: 20px;
+    user-select: none;
 }
 
 .desconto-card {
@@ -30,7 +39,7 @@
     width: 380px;
     height: 200px;
     border-radius: 10px;
-    background-color: var(--cor-card-desconto);
+    background-color: white;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.30);
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
@@ -63,18 +72,30 @@
     align-self: center;
     color: var(--cor-base);
     font-size: 42px !important;
+    margin-top: 5%;
+}
+
+.ativo {
+    background-color: var(--cor-base);
+}
+
+.ativo .valor-desconto, .ativo .card-moedas, .ativo .card-icon {
+    color: var(--cor-card-desconto);
+    filter: brightness(0) saturate(100%) contrast(100%) invert(100%);
 }
 
 .btn-desconto {
     display: flex;
     width: 280px;
     height: 40px;
+    font-size: 20px;
     padding: 5px 10px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     background-color: var(--cor-base);
     color: var(--cor-card-desconto);
+    font-weight: 700;
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
@@ -84,7 +105,7 @@
 
 .btn-desconto:hover{
     transform: scale(1.02);
-    background-color: var(--cor-card-desconto);
+    background-color: #EDEDED;
     color: var(--cor-base);
 }
 
