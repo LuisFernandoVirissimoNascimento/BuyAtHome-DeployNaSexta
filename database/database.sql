@@ -20,17 +20,18 @@ CREATE TABLE produto (
     desconto DECIMAL(5, 2)
 );
 
-CREATE TABLE moedas (
-    id_cliente INT NOT NULL,
-    id_moeda INT AUTO_INCREMENT PRIMARY KEY,
-    valor DECIMAL(10, 2),
-    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
-);
-
 CREATE TABLE cupom (
     id_cliente INT NOT NULL,
     id_cupom INT AUTO_INCREMENT PRIMARY KEY,
     data_exp DATE,
     codigo VARCHAR(10),
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+);
+
+CREATE TABLE moedas (
+    id_cliente INT PRIMARY KEY,
+    daily_add TINYINT(1) NOT NULL DEFAULT 1,
+    moedas DECIMAL(10, 2) DEFAULT 0,
+    ultima_moeda TIMESTAMP NULL DEFAULT NULL,
+    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente) ON DELETE CASCADE
 );
