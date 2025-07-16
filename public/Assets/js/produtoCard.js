@@ -6,7 +6,6 @@ async function carregarProdutos() {
   try {
     const response = await fetch("product");
     const produtos = await response.json();
-    console.log(produtos);
 
     produtos.forEach(produto => {
       const precoAntigo = parseFloat(produto.valor);

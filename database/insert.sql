@@ -9,7 +9,7 @@ VALUES
     ('Coca Cola', 'images/card product/Coca Cola.webp', 'Refrigerante refrescante com sabor único de cola, perfeito para qualquer ocasião.', 9.99, 7.50),
     ('Requeijão Extra cremoso', 'images/card product/produto.png', 'Requeijão cremoso, ideal para pães, torradas e receitas diversas.', 12.90, 12.00);
 
-INSERT INTO moedas (id_cliente, valor)
+INSERT INTO moedas (id_cliente, moedas)
 VALUES 
     (1, 150.75);
 

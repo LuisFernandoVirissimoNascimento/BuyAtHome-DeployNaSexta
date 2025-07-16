@@ -9,13 +9,6 @@ class MoedasModel extends Model
     protected string $table = 'moedas';
     protected string $primaryKey = 'id_cliente';
 
-    /**
-     * Retorna os dados do cliente pelo ID, incluindo moedas e ultima_moeda
-     *
-     * @param int $id
-     * @return array|null
-     */
-
     public function getMoedasInfo(int $id): ?array
     {
         $sql = "SELECT moedas, ultima_moeda FROM moedas WHERE id_cliente = :id LIMIT 1";
@@ -35,19 +28,26 @@ class MoedasModel extends Model
         return null;
     }
 
-    /**
-     * Atualiza as moedas e a data da ultima moeda recebida do cliente
-     *
-     * @param int $id
-     * @param float $novaQuantidade
-     * @param string $dataAtual Formato 'Y-m-d H:i:s'
-     * @return bool
-     */
     public function atualizarMoedas(int $id, float $novaQuantidade, string $dataAtual): bool
     {
-        return $this->update($id, [
-            'moedas' => $novaQuantidade,
-            'ultima_moeda' => $dataAtual
-        ]);
+        $sql = "UPDATE moedas SET moedas = :moedas, ultima_moeda = :ultima WHERE id_cliente = :id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':moedas', $novaQuantidade, \PDO::PARAM_INT);
+        $stmt->bindValue(':ultima', $dataAtual, \PDO::PARAM_STR);
+        $stmt->bindValue(':id', $id, \PDO::PARAM_INT);
+
+        $result = $stmt->execute();
+        error_log("Atualizar moedas resultado: " . ($result ? 'sucesso' : 'falha') . ", linhas afetadas: " . $stmt->rowCount());
+        return $result && $stmt->rowCount() > 0;
+    }
+    
+    
+
+    public function criarRegistro(int $id): bool
+    {
+        $sql = "INSERT INTO moedas (id_cliente, moedas, ultima_moeda) VALUES (:id, 0, NULL)";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindParam(':id', $id, \PDO::PARAM_INT);
+        return $stmt->execute();
     }
 }

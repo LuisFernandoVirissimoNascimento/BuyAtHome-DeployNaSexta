@@ -11,31 +11,37 @@ class MoedasController extends Controller
     {
         header('Content-Type: application/json');
 
-        $id = 1;
+        $id = $_SESSION['usuario']['id_cliente'];
         $model = new MoedasModel();
         $cliente = $model->getMoedasInfo($id);
 
-        $moedas = $cliente['moedas'];
+        $moedas = $cliente['moedas'] ?? 0;
         $ultima = $cliente['ultima_moeda'] ? new DateTime($cliente['ultima_moeda']) : null;
         $agora = new DateTime();
 
-        $podeColetar = !$ultima || $ultima->diff($agora)->days >= 1;
+        $horaLimite = (new DateTime())->setTime(12, 0, 0);
+        $jaRecebeuHoje = $ultima && $ultima->format('Y-m-d') === $agora->format('Y-m-d');
+
+        $podeColetar = !$jaRecebeuHoje && $agora >= $horaLimite;
 
         if ($podeColetar) {
-            $nova = $moedas + 2;
-            $model->atualizarMoedas($id, $nova, $agora->format('Y-m-d H:i:s'));
+            $novaQuantidade = $moedas + 1;
+            $model->atualizarMoedas($id, $novaQuantidade, $agora->format('Y-m-d H:i:s'));
 
             echo json_encode([
                 'success' => true,
                 'message' => 'Moedas adicionadas com sucesso!',
-                'nova_quantidade' => $nova
+                'nova_quantidade' => $novaQuantidade,
+                'ultima_moeda' => $agora->format('Y-m-d H:i:s'),
             ]);
         } else {
             echo json_encode([
                 'success' => false,
                 'message' => 'Você já coletou moedas hoje.',
-                'nova_quantidade' => $moedas
+                'nova_quantidade' => $moedas,
+                'ultima_moeda' => $ultima ? $ultima->format('Y-m-d H:i:s') : null,
             ]);
         }
+
     }
 }

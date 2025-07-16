@@ -4,7 +4,7 @@
          <img class="logo_text" src="public/images/nav/logo_text.png">
      </div>
      <div class="coins_menu_container">
-         <p class="coin"> <?= htmlspecialchars($moedas) ?> </p>
+         <p class="coin"> <?= htmlspecialchars($moedas ?? 0) ?> </p>
          <img class="icon" src="public/images/nav/moeda.svg">
          <img id="menu_button" class="menu icon" src="public/images/nav/menu.svg">
      </div>
