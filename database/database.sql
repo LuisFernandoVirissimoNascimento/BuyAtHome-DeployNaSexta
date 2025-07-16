@@ -23,7 +23,7 @@ CREATE TABLE produto (
 CREATE TABLE moedas (
     id_cliente INT NOT NULL,
     id_moeda INT AUTO_INCREMENT PRIMARY KEY,
-    valor DECIMAL(10, 2),
+    valor INT default 0,
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
 
