@@ -1,86 +1,98 @@
 .linha {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .coluna {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .centro-j {
-    justify-content: center;
+  justify-content: center;
 }
 
 .centro-a {
-    align-items: center;
+  align-items: center;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .margin-5 {
-    margin: 2px;
+  margin: 2px;
 }
 
 .notBold {
-    font-weight: lighter;
+  font-weight: lighter;
 }
 
 main {
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../img/backgroundLogin2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: black;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/backgroundLogin2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
 }
 
 .formLogin {
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 40vw;
-    height: 100vh;
+  background-color: rgb(255, 255, 255, 0.8);
+  width: 40vw;
+  height: 100vh;
 }
 
 .input {
-    background: none;
-    border: 0px;
-    border-bottom: solid 1px;
-    margin: 5px;
+  background: none;
+  border: 0px;
+  border-bottom: solid 1px;
+  margin: 5px;
 
-    width: 70%;
-    height: 40px;
+  width: 70%;
+  height: 40px;
 }
 
 .fonte-titulo {
-    font-size: 90px;
+  font-size: 90px;
 }
 
 .bt-enviar {
-    color: white;
-    background-color: var(--cor-base);
-    border: 0px;
-    border-radius: 10px;
-    height: 30px;
-    width: 120px;
-    font-size: larger;
+  color: white;
+  background-color: var(--cor-base);
+  border: 0px;
+  border-radius: 10px;
+  height: 30px;
+  width: 120px;
+  font-size: larger;
 }
 
-@media (max-width:1024px) {
-    .formLogin {
-        width: 70vw;
-    }
-    
+.alert {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
 }
 
-@media (max-width:768px) {
-    .fonte-titulo {
-        font-size: 70px;
-    }
+.alert-danger {
+  background-color: red;
+  color: black;
 }
-@media (max-width:425px) {
-    .fonte-titulo {
-        font-size: 40px;
-    }
+
+@media (max-width: 1024px) {
+  .formLogin {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .fonte-titulo {
+    font-size: 70px;
+  }
+}
+@media (max-width: 425px) {
+  .fonte-titulo {
+    font-size: 40px;
+  }
 }

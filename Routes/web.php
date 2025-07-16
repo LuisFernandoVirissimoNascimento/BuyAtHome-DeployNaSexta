@@ -16,6 +16,7 @@ $router->get('/login', LoginController::class, 'login', 'loginpage');
 $router->post('/login', LoginController::class, 'autenticar', 'login.submit');
 $router->get('/descontos', CuponsController::class, 'descontos', 'lista_descontos');
 $router->get('/product', ProductController::class, 'product', 'products');
+$router->get('/logout', LoginController::class, 'logout', 'logout');
 
 
 

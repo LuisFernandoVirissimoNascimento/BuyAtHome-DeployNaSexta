@@ -8,11 +8,14 @@ use Core\View;
 class Controller
 {
     // public $request;
+    // $request = new Request();
+    // $this->request = $request;
 
-    // public function __construct() {
-    //     $request = new Request();
-    //     $this->request = $request;
-    // }
+    public function __construct() {
+        if (!session()->has('usuario')) {
+            redirect()->route('loginpage');
+        }
+    }
 
     public static function errorPage()
     {

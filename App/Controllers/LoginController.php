@@ -34,5 +34,10 @@ class LoginController
             redirect()->route('loginpage');
         }
     }
+    
+    public function logout() {
+        session()->clear();
+        redirect()->route('loginpage');
+    }
 }
 

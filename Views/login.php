@@ -16,7 +16,14 @@
 </head>
 
 <body>
-<?php include_once(__DIR__ . '/components/navbar.php'); ?>
+    <?php if (session()->has('error')): ?>
+        <div class="alert">
+            <div class="alert-danger">
+                <p><?php echo session()->get('error'); ?></p>
+            </div>
+        </div>
+    <?php endif; ?>
+    <navbar></navbar>
     <main>
         <form class='formLogin coluna centro-a centro-j' method="POST" action="">
             <div class="coluna centro-a centro-j">
