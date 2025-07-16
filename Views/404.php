@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <title>404</title>
+    <link rel="icon" href="public/images/icon.ico" type="image/x-icon">
 </head>
 
 <body class="linha centro-j centro-a">
