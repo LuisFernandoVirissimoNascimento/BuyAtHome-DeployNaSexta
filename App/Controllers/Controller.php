@@ -13,6 +13,7 @@ class Controller
 
     public function __construct() {
         if (!session()->has('usuario')) {
+            session()->flash('error', 'Por favor logue no site.');
             redirect()->route('loginpage');
         }
     }
