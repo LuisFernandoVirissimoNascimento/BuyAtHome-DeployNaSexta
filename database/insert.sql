@@ -7,7 +7,7 @@ VALUES
 
 INSERT INTO produto (name_produto, descricao, valor, desconto) 
 VALUES 
-    ('Cró Cebola', 'Cebola crocante, ideal para temperar e dar sabor às suas receitas.', 599.90, 10.00),
+    ('Kró Cebola', 'Cebola crocante, ideal para temperar e dar sabor às suas receitas.', 599.90, 10.00),
     ('Maionese', 'Maionese cremosa e suave, ideal para acompanhar sanduíches e saladas.', 299.50, 5.00),
     ('Coca Cola', 'Refrigerante refrescante com sabor único de cola, perfeito para qualquer ocasião.', 149.90, 7.50),
     ('Requeijão Extra cremoso', 'Requeijão cremoso, ideal para pães, torradas e receitas diversas.', 249.90, 12.00);
