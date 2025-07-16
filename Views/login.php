@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <navbar></navbar>
+<?php include_once(__DIR__ . '/components/navbar.php'); ?>
     <main>
         <form class='formLogin coluna centro-a centro-j' method="POST" action="">
             <div class="coluna centro-a centro-j">
