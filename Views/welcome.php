@@ -18,9 +18,11 @@
             <h1>Mini-mercado de Condomínio</h1>
             <h1 class="orange-text">Uma facilidade que surpreende.</h1>
         </div>
-        <div class="right-items">
-            <button>Resgatar Cupons</button>
-        </div>    
+    </section>
+    <div class="division"></div>
+    <div class="center">
+        <h1>As promoções de hoje!</h1>
+        <h1 class="orange-text-title">É muito mais economia!</h1>
     </div>
 </section>
 <div class="division"></div>
