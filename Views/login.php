@@ -24,6 +24,7 @@
             </div>
         </div>
     <?php endif; ?>
+    
     <navbar></navbar>
     <main>
         <form class='formLogin coluna centro-a centro-j' method="POST" action="">

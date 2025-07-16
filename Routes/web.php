@@ -1,10 +1,10 @@
 <?php
 
 use Core\Router;
-
 use App\Controllers\HomeController;
 use App\Controllers\LoginController;
 use App\Controllers\CuponsController;
+use App\Controllers\MoedasController;
 use App\Controllers\ProductController;
 
 global $router;
@@ -19,5 +19,6 @@ $router->get('/product', ProductController::class, 'product', 'products');
 $router->get('/logout', LoginController::class, 'logout', 'logout');
 
 
+$router->get('/diaria', MoedasController::class, 'diaria');
 
 $router->dispatch();

@@ -6,7 +6,6 @@ use Core\View;
 
 class HomeController extends Controller
 {
-
     public function index()
     {
         View::render('');
@@ -14,6 +13,8 @@ class HomeController extends Controller
 
     public function welcome()
     {
+        $moedas = $_SESSION['user_moedas'] ?? 0;
+
         View::render('welcome');
     }
 }
