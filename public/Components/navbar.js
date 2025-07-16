@@ -13,22 +13,18 @@ const navbar = () => {
   <div id="menu_sidebar" class="sidebar">
     <img id="menu_close_sidebar" class="close_sidebar_icon" src="public/images/nav/x.svg" alt="fechar">
     <ul class="sidebar_options">
-      <div class="options_container">
+      <button class="options_container" onclick="window.location.href='/BuyAtHome-DeployNaSexta/'">
         <img class="icon" src="public/images/nav/home.svg" alt="home">
         <li>Inicio</li>
-      </div>
-      <div class="options_container">
-        <img class="icon" src="public/images/nav/promocao.svg" alt="promoção">
-        <li>Promoções</li>
-      </div>
-      <div class="options_container">
+      </button>
+      <button class="options_container" onclick="window.location.href='descontos'">
         <img class="icon" src="public/images/nav/cupom.svg" alt="cupom">
         <li>Cupons</li>
-      </div>
-      <div class="options_container">
+      </button>
+      <button class="options_container" onclick="window.location.href=''">
         <img class="icon" src="public/images/nav/sair.svg" alt="sair">
         <li>Sair</li>
-      </div>
+      </button>
     </ul>
   </div>`;
 };
