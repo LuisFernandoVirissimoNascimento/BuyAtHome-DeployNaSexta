@@ -11,7 +11,7 @@ VALUES
 
 INSERT INTO moedas (id_cliente, moedas)
 VALUES 
-    (1, 150.75);
+    (1, 150);
 
 INSERT INTO cupom (id_cliente, data_exp, codigo)
 VALUES 
