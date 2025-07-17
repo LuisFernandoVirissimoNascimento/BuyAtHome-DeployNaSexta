@@ -44,4 +44,52 @@ class MoedasController extends Controller
         }
 
     }
+
+    public function comprarDesconto()
+{
+    header('Content-Type: application/json');
+
+    if (!isset($_SESSION['usuario']['id_cliente'])) {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Usuário não autenticado.',
+        ]);
+        return;
+    }
+
+    $id = $_SESSION['usuario']['id_cliente'];
+    $model = new MoedasModel();
+    $cliente = $model->getMoedasInfo($id);
+
+    if (!$cliente) {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Usuário não encontrado.',
+        ]);
+        return;
+    }
+
+    $moedas = $cliente['moedas'] ?? 0;
+    $custo = $_POST['moeda'] ?? 0;
+
+    if ($moedas < $custo) {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Você não possui moedas suficientes para este desconto.',
+            'nova_quantidade' => $moedas,
+        ]);
+        return;
+    }
+
+    $novaQuantidade = $moedas - $custo;
+    $agora = (new DateTime())->format('Y-m-d H:i:s');
+    $model->atualizarMoedas($id, $novaQuantidade, $agora);
+
+    echo json_encode([
+        'success' => true,
+        'message' => 'Desconto adquirido com sucesso!',
+        'nova_quantidade' => $novaQuantidade,
+    ]);
+}
+
 }

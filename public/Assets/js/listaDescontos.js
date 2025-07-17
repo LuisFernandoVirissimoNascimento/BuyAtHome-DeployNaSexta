@@ -42,13 +42,87 @@ itens_desconto.forEach(item => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll('.desconto-card');
-  
+
     cards.forEach(card => {
-      card.addEventListener('click', (event) => {
-        const cardId = card.dataset.id;
-        
-        card.classList.toggle("ativo")
-  
-      });
+        card.addEventListener('click', () => {
+            cards.forEach(c => c.classList.remove('ativo'));
+            card.classList.add('ativo');
+        });
     });
-  });
+});
+
+function showToast(message, type = 'success') {
+    const toastContainer = document.getElementById('toast-container');
+    const currentToasts = toastContainer.querySelectorAll('.toast');
+    if (currentToasts.length >= 5) return;
+
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = '×';
+    closeBtn.className = 'toast-close-btn';
+    closeBtn.onclick = () => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+    };
+
+    toast.appendChild(closeBtn);
+    toastContainer.appendChild(toast);
+
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 10);
+}
+
+
+
+function generateRandomCode() {
+    let code = '';
+    for (let i = 0; i < 10; i++) {
+        code += Math.floor(Math.random() * 10);
+    }
+    return code;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const comprarButton = document.querySelector('.btn-desconto');
+
+    comprarButton.addEventListener('click', () => {
+        const selectedCard = document.querySelector('.desconto-card.ativo');
+
+        if (!selectedCard) {
+            showToast('Selecione um desconto primeiro!', 'error');
+            return;
+        }
+
+        const desconto = parseInt(selectedCard.dataset.desconto, 10);
+        const moeda = parseInt(selectedCard.dataset.moeda, 10);
+
+        fetch('comprar-desconto', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `desconto=${desconto}&moeda=${moeda}`,
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                const code = generateRandomCode();
+                showToast(`Cupom gerado: ${code}`, 'success');
+
+                document.querySelector('.coin').textContent = data.nova_quantidade;
+            } else {
+                showToast(data.message, 'error');
+            }
+        })
+        .catch(err => {
+            console.error('Erro ao comprar desconto:', err);
+            showToast('Erro ao processar a compra.', 'error');
+        });
+    });
+});
+
+

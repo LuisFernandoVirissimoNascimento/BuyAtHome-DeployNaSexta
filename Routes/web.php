@@ -20,5 +20,7 @@ $router->get('/logout', LoginController::class, 'logout', 'logout');
 
 
 $router->get('/diaria', MoedasController::class, 'diaria');
+$router->post('/comprar-desconto', MoedasController::class, 'comprarDesconto');
+
 
 $router->dispatch();

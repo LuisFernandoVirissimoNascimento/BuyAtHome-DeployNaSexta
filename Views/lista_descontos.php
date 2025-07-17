@@ -21,7 +21,7 @@
         
             <button class="btn-desconto">Comprar</button>
     </div>
-
+    <div id="toast-container"></div>
 </body>
 <script type="module" src="public/Assets/js/listaDescontos.js"></script>
 <script src="public/Assets/js/home.js" type="module"></script>
